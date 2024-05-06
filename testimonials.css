@@ -1,0 +1,106 @@
+/*Si eres algún usuario avanzaod en css,
+ se le agradecería un pequeño feedback...   */
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Barlow Semi Condensed",sans-serif;
+}
+
+.container{
+	display: grid;
+	grid-template-rows: repeat(auto-fill,2fr);
+	grid-row-gap: 25px;
+	margin: 20px;
+	justify-content: center;
+}
+
+.item1,.item2,.item3,.item4,.item5{
+ border-radius: 15px;
+ padding: 20px 25px 20px 25px;
+ text-align: left;
+
+}
+
+.item1{
+	background:  hsl(263, 55%, 52%);
+	color: #fff;
+
+}
+
+.item1__header1__logo{
+	
+}
+
+.item1__header1,.item2__header1,.item3__header1,.item4__header1,.item5__header1{
+	display: flex;
+	flex-direction: row;
+
+}
+
+.item1__header1__image img,.item2__header1__image img,.item3__header1__image img,.item4__header1__image img,.item5__header1__image img{
+	margin-right: 10px;
+	border-radius: 50%;
+	border: 2px solid hsl(0, 0%, 100%);
+    width: 40px;
+    height: 40px;
+}
+
+.item1__header1__name h4,.item2__header1__name h4,.item3__header1__name h4,.item4__header1__name h4,.item5__header1__name h4{
+  opacity: 50%;
+}
+
+.item1__section,.item2__section,.item3__section,.item4__section,.item5__section{
+	opacity: 75%;
+	font-size: 18px;
+}
+
+.item1__header2, .item1__section,.item2__header2, .item2__section,.item3__header2, .item3__section,.item4__header2, .item4__section,.item5__header2, .item5__section{
+  margin-bottom: 20px;
+}
+
+.item2{
+	background: hsl(217, 19%, 35%);
+	color: #fff;
+}
+
+.item3,.item5{
+	color: hsl(217, 19%, 35%);
+	box-shadow: 5px 17px 25px 2px rgba(0, 0, 0, 0.2);;
+}
+
+.item4{
+	color: #fff;
+	background:hsl(219, 29%, 14%);
+}
+
+/*desktop design*/
+@media screen and (min-width: 1024px){
+    .container{
+    	display: grid;
+    	grid-template-columns: repeat(4,300px);
+        grid-template-rows: repeat(2,1fr);
+    	grid-column-gap: 20px;
+    }
+    .item1{
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .item2{
+      /*
+         Me estoy meando...
+      */
+    }
+    .item3{
+    	grid-column-start: 1;
+    }
+    .item4{
+    	grid-column-start: 2;
+    	grid-column-end: 4;
+    }
+    .item5{
+    	grid-column-start: 4;
+    	grid-row-start: 1;
+    	grid-row-end: 3;
+    }
+}
